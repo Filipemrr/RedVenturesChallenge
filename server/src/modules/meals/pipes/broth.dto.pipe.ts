@@ -15,7 +15,7 @@ export class BrothDtoPipe implements PipeTransform {
         ) {
             throw new BadRequestException('Itens obrigatórios não encontrados');
         }
-        if (typeof value.imageInactive !== 'string' || typeof value.imageActive !== 'string' || typeof value.imageInactive !== "string" || value.name !== "string" || value.description !== "string" || value.price !== "string") {
+        if (typeof value.imageActive !== 'string' || typeof value.imageActive !== 'string' || typeof value.name !=='string' || typeof value.description !== 'string' || typeof value.price !== 'number' || (value.type.toLowerCase() !== 'broth' && value.type.toLowerCase() !== 'caldo')) {
             throw new BadRequestException(
                 'Dados de cadastro de caldo invalido',
             );

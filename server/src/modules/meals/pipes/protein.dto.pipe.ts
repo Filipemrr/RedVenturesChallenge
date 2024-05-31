@@ -11,13 +11,14 @@ export class ProteinDtoPipe implements PipeTransform {
             !value.imageActive ||
             !value.name ||
             !value.description ||
-            !value.price
+            !value.price ||
+            !value.type
         ) {
             throw new BadRequestException('Itens obrigatórios não encontrados');
 
         }
 
-        if (typeof value.imageActive !== 'string' || typeof value.imageActive !== 'string' || typeof value.name !=='string' || typeof value.description !== 'string' || typeof value.price !== 'number' ) {
+        if (typeof value.imageActive !== 'string' || typeof value.imageActive !== 'string' || typeof value.name !=='string' || typeof value.description !== 'string' || typeof value.price !== 'number' || (value.type.toLowerCase() !== 'protein' && value.type.toLowerCase() !== 'proteina')) {
             throw new BadRequestException(
                 'Dados de cadastro de proteina invalido',
             );

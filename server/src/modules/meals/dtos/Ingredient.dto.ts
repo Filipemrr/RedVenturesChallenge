@@ -1,6 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
-
-export class BrothDto {
+export class IngredientDTO {
+    @ApiProperty()
+    type: string;
     @ApiProperty()
     imageInactive: string;
     @ApiProperty()

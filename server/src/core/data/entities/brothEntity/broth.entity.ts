@@ -1,10 +1,13 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 
-@Entity('broths')
-export class BrothsEntity {
+@Entity('BROTH')
+export class BrothEntity {
     @PrimaryGeneratedColumn()
     public id: number;
+
+    @Column()
+    public type: string;
 
     @Column()
     public imageInactive: string;

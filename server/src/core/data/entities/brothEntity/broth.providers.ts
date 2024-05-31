@@ -1,11 +1,11 @@
 import { DataSource } from 'typeorm';
-import { BrothsEntity } from './broths.entity';
+import { BrothEntity } from './broth.entity';
 
-export const brothEntityProvider = [
+export const brothEntityProviders = [
     {
         provide: 'BROTH_REPOSITORY',
         useFactory: (dataSource: DataSource) =>
-            dataSource.getRepository(BrothsEntity),
+            dataSource.getRepository(BrothEntity),
         inject: ['DATA_SOURCE'],
     },
 ];

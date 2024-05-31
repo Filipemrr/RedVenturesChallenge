@@ -1,10 +1,13 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 
-@Entity('protein')
+@Entity('PROTEIN')
 export class ProteinEntity {
     @PrimaryGeneratedColumn()
     public id: number;
+
+    @Column()
+    public type: string;
 
     @Column()
     public imageInactive: string;
