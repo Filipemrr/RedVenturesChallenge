@@ -48,10 +48,10 @@ $ npm run start:prod
 ## Test
 
 ```bash
-# unit tests
+# unit populate
 $ npm run test
 
-# e2e tests
+# e2e populate
 $ npm run test:e2e
 
 # test coverage

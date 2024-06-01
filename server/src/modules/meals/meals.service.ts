@@ -5,9 +5,9 @@ import {
 import { Repository } from 'typeorm';
 import { ProteinEntity } from "../../core/data/entities/proteinEntity/protein.entity";
 import { BrothEntity } from "../../core/data/entities/brothEntity/broth.entity";
-import {IngredientDTO} from "./dtos/Ingredient.dto";
-import { ProteinFactory } from './factories/protein.factory';
-import {BrothFactory} from "./factories/broth.factory";
+import { ProteinFactory } from "./factories/protein.factory";
+import { BrothFactory } from "./factories/broth.factory";
+import { IngredientDTO } from "./dtos/Ingredient.dto";
 
 @Injectable()
 export class MealsService {
@@ -24,15 +24,22 @@ export class MealsService {
     ) {}
 
     async addNewProtein(prospectIngredient: IngredientDTO): Promise<object> {
+        const existingProtein = await this.proteinRepository.findOne({ where: { name: prospectIngredient.name } });
+        if (existingProtein) {
+            return { message: 'Protein already exists' };
+        }
         const newProtein = this.proteinFactory.create(prospectIngredient);
-        console.log(newProtein);
-        //await this.proteinRepository.save(newProtein);
+        await this.proteinRepository.save(newProtein);
         return { message: 'Protein added successfully' };
     }
+
     async addNewBroth(prospectIngredient: IngredientDTO): Promise<object> {
+        const existingBroth = await this.brothRepository.findOne({ where: { name: prospectIngredient.name } });
+        if (existingBroth) {
+            return { message: 'Broth already exists' };
+        }
         const newBroth = this.brothFactory.create(prospectIngredient);
-        console.log(newBroth);
-        //await this.brothRepository.save(newBroth);
-        return { message: 'Brot added successfully' };
+        await this.brothRepository.save(newBroth);
+        return { message: 'Broth added successfully' };
     }
 }
