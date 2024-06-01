@@ -42,4 +42,14 @@ export class MealsService {
         await this.brothRepository.save(newBroth);
         return { message: 'Broth added successfully' };
     }
+
+    async getListOfBroths(): Promise<IngredientDTO[]> {
+        let listOfBroths: BrothEntity[];
+        return listOfBroths = await this.brothRepository.find();
+    }
+
+    async getListOfProteins(): Promise<IngredientDTO[]> {
+        let listOfProteins: BrothEntity[];
+        return listOfProteins = await this.proteinRepository.find();
+    }
 }
