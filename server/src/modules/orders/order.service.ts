@@ -36,9 +36,8 @@ export class OrderService {
         if (!protein || !broth)
             throw new NotFoundException("brothId or proteinId are invalid");
 
-        const generateOrder = await this.newOrderFactory.create(protein.name, broth.name);
-        console.log(generateOrder);
-        await this.orderRepository.save(generateOrder);
+        const generateOrder = await this.newOrderFactory.create(broth.name,protein.name);
+        await this.orderRepository.save(generateOrder); //save order in db
         return { id: generateOrder.id, description: generateOrder.description, image: generateOrder.image }
     }
 }

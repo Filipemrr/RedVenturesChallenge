@@ -12,8 +12,8 @@ export class OrderFactory {
     async create(brothName: string, proteinName: string) {
         const order = new OrderEntity();
         order.id = await this.generateOrderId();
-        order.image = this.getOrderDescription();
-        order.description = this.getOrderImage();
+        order.description = this.getOrderDescription(brothName, proteinName);
+        order.image = this.getOrderImage(proteinName);
         return order;
     }
 
@@ -38,10 +38,10 @@ export class OrderFactory {
             }
         }
     }
-    private getOrderImage(): string {
-        return "image-url";
+    private getOrderImage(protein: string): string {
+        return `https://tech.redventures.com.br/icons/ramen/ramen${protein}.png`;
     }
-    private getOrderDescription(): string {
-        return "description-url";
+    private getOrderDescription(broth: string, protein: string): string {
+        return `${broth} and ${protein} Ramen`;
     }
 }

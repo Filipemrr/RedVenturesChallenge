@@ -51,7 +51,7 @@ const proteinFlavors: IngredientDTO[] = [
     type: "protein",
     imageInactive: "https://tech.redventures.com.br/icons/karaangue/inactive.svg",
     imageActive: "https://tech.redventures.com.br/icons/karaangue/active.svg",
-    name: "Karaangue",
+    name: "Karaague",
     description: "Three units of friend chicken, moyashi, ajitama egg and other vegetables",
     price: 12
   },
