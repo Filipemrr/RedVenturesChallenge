@@ -1,6 +1,6 @@
 import axios from 'axios';
 import * as dotenv from 'dotenv';
-import { IngredientDTO } from "../../modules/meals/dtos/Ingredient.dto";
+import {IngredientDTO} from "../../../modules/meals/dtos/Ingredient.dto";
 
 dotenv.config();
 
