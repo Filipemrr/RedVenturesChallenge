@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         card.innerHTML = `
             <img src="${data.imageInactive}" alt="${data.name}">
             <h2 class="card-name">${data.name}</h2>
-            <p>${data.description}</p>
+            <p class="card-description">${data.description}</p>
             <h2 class="card-price">US$ ${data.price}</h2>
         `;
 
