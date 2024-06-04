@@ -43,6 +43,9 @@ document.addEventListener("DOMContentLoaded", function() {
             price.classList.add('active');
 
             activeProteinCard = card;
+
+            // Salva o ID da proteína selecionada no localStorage
+            localStorage.setItem('selectedProteinId', data.id);
         });
 
         card.dataset.imageInactive = data.imageInactive;
@@ -56,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(response => response.json())
             .then(responseData => {
                 const data = responseData.data;
-                console.log("Data received:", data);
                 if (Array.isArray(data)) {
                     const container = document.getElementById('protein-cards');
                     container.innerHTML = '';

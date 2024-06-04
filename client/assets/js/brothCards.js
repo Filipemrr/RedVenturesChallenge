@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const apiUrl = 'http://localhost:3000/meals/broth';
-    let activeCard = null;
+    const brothApiUrl = 'http://localhost:3000/meals/broth';
+    let activeBrothCard = null;
 
-    function createCard(data) {
+    function createBrothCard(data) {
         const card = document.createElement('div');
         card.classList.add('card');
 
@@ -14,18 +14,18 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
 
         card.addEventListener('click', function() {
-            if (activeCard) {
-                activeCard.classList.remove('active');
-                const prevImage = activeCard.querySelector('.card-image');
-                prevImage.src = activeCard.dataset.imageInactive;
+            if (activeBrothCard) {
+                activeBrothCard.classList.remove('active');
+                const prevImage = activeBrothCard.querySelector('.card-image');
+                prevImage.src = activeBrothCard.dataset.imageInactive;
 
-                const prevName = activeCard.querySelector('.card-name');
+                const prevName = activeBrothCard.querySelector('.card-name');
                 prevName.classList.remove('active');
 
-                const prevDescription = activeCard.querySelector('.card-description');
+                const prevDescription = activeBrothCard.querySelector('.card-description');
                 prevDescription.classList.remove('active');
 
-                const prevPrice = activeCard.querySelector('.card-price');
+                const prevPrice = activeBrothCard.querySelector('.card-price');
                 prevPrice.classList.remove('active');
             }
 
@@ -42,7 +42,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const price = card.querySelector('.card-price');
             price.classList.add('active');
 
-            activeCard = card;
+            activeBrothCard = card;
+
+            // Salva o ID do caldo selecionado no localStorage
+            localStorage.setItem('selectedBrothId', data.id);
         });
 
         card.dataset.imageInactive = data.imageInactive;
@@ -52,17 +55,16 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function fetchBrothData() {
-        fetch(apiUrl)
+        fetch(brothApiUrl)
             .then(response => response.json())
             .then(responseData => {
                 const data = responseData.data;
-                console.log("Data received:", data);
                 if (Array.isArray(data)) {
                     const container = document.getElementById('broth-cards');
                     container.innerHTML = '';
                     data.forEach(item => {
-                        const card = createCard(item);
-                        container.appendChild(card);
+                        const brothCard = createBrothCard(item);
+                        container.appendChild(brothCard);
                     });
                 } else {
                     console.error('Data is not an array:', data);
