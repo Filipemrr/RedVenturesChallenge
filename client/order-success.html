@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Order Success Page</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
     <style>
         body {
             display: flex;
@@ -11,8 +12,11 @@
         }
         section {
             width: 50%;
-            border: 1px solid indianred;
-            box-sizing: border-box; /* Inclui a borda na largura total */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #FAFAED;
         }
     </style>
 </head>
@@ -21,7 +25,10 @@
     <img src="assets/img/successBackground.png" alt="" style="width: 100%; height: 100%">
 </section>
 <section>
-    <h1>Seção Direita</h1>
+    <img src="assets/img/success-icon.png" style="width: 65px; height: 71px;">  <h2 class="section__title" style="font-size: 24px; color: #FFC024; font-weight: 900">どもありがとうございます。</h2>
+    <h2 class="section__title" style="color:#FF4E42">Your order is being prepared</h2>
+    <p class="section__subtitle" style="font-size: 16px; font-weight: 500">Hold on, when you least expect you will be eating your rámen. </p>
 </section>
+
 </body>
 </html>

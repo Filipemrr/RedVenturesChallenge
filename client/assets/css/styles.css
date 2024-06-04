@@ -289,6 +289,13 @@ input {
   padding: 14px;
   color: #FFFFFF;
 }
+.success-message {
+  display: flex;
+  width: 50%;
+  height: 50%;
+  align-items: center;
+  border: 10px solid black;
+}
 
 .place__container {
   display: grid;
