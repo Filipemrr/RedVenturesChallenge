@@ -48,8 +48,8 @@ const proteinFlavors = [
     },
     {
         type: "protein",
-        imageInactive: "https://tech.redventures.com.br/icons/karaangue/inactive.svg",
-        imageActive: "https://tech.redventures.com.br/icons/karaangue/active.svg",
+        imageInactive: "https://cdn.discordapp.com/attachments/1017600421335937104/1247639601179398265/image.png?ex=6660c26c&is=665f70ec&hm=959a1580c8d9a18a9858cdf39aae55d1875f28b20216c6562ba0736874d65029&",
+        imageActive: "https://cdn.discordapp.com/attachments/1017600421335937104/1247640408528523304/image.png?ex=6660c32d&is=665f71ad&hm=a285a7faca51cc08c17b23c0a69954065c071fd49eb8e68cb23132f6c210a906&",
         name: "Karaague",
         description: "Three units of friend chicken, moyashi, ajitama egg and other vegetables",
         price: 12

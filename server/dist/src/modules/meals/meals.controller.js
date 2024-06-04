@@ -19,7 +19,6 @@ const protein_dto_pipe_1 = require("./pipes/protein.dto.pipe");
 const Ingredient_dto_1 = require("./dtos/Ingredient.dto");
 const CustomResponse_1 = require("../../core/domain/ResponseModel/CustomResponse");
 const broth_dto_pipe_1 = require("./pipes/broth.dto.pipe");
-const x_api_middleware_1 = require("../../core/infra/middlewares/x-api-middleware");
 let MealsController = class MealsController {
     constructor(mealService) {
         this.mealService = mealService;
@@ -86,7 +85,6 @@ __decorate([
 ], MealsController.prototype, "addNewBroth", null);
 exports.MealsController = MealsController = __decorate([
     (0, common_1.Controller)('meals'),
-    (0, common_1.UseGuards)(x_api_middleware_1.ApiKeyGuard),
     __metadata("design:paramtypes", [meals_service_1.MealsService])
 ], MealsController);
 //# sourceMappingURL=meals.controller.js.map
