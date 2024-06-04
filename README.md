@@ -63,15 +63,18 @@ $ npm run migration
 # Telas e Funcionalidades👇🏻
 ## Escolha seu pedido.
 <p align="center">
-  <img src="" alt="Texto alternativo da imagem" width="600">
+  <img src="./client/assets/img/brothImage.png" alt="Texto alternativo da imagem" width="600">
+</p>
+<p align="center">
+  <img src="./client/assets/img/chasuChose.png" alt="Texto alternativo da imagem" width="600">
 </p>
 
 ***
 <br>
 
-## Pedido realizado com successo'
+## Pedido realizado com successo
 <p align="center">
-  <img src="" alt="Texto alternativo da imagem" width="600">
+  <img src="./client/assets/img/checkout.png" alt="Texto alternativo da imagem" width="600">
 </p>
 
 ***
@@ -85,9 +88,9 @@ A arquitetura do backend foi baseada em duas arquiteturas comuns, Clean Architec
 A arquitetura base do projeto define os módulos como entidades não relacionadas, e todos os conteúdos e funcionalidades integradas estão na base/core
 
 <h4>Representacao Visual<h4/>
-<img src="./client/public/arquitetura.png" alt="Texto alternativo da imagem" width="600">
+<img src="./client/assets/img/arquitetura.png" alt="Texto alternativo da imagem" width="600">
 <h4>Representacao Pratica<h4/>
-<img src="./client/public/pastas.png" alt="Texto alternativo da imagem" width="600">
+<img src="./client/assets/img/pagination.png" alt="Texto alternativo da imagem" width="600">
 
 ### Core
 É a camada responsável por conter as dependências do projeto, middlewares, serviços compartilhados, utilitários…
@@ -133,9 +136,9 @@ service e um modulo.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📂orders <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂dtos <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂pipes <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://emoji.gg/emoji/8584-typescript"><img src="https://cdn3.emoji.gg/emojis/8584-typescript.png" width="12px" height="12px" alt="TypeScript"></a> order.controller.ts <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://emoji.gg/emoji/8584-typescript"><img src="https://cdn3.emoji.gg/emojis/8584-typescript.png" width="12px" height="12px" alt="TypeScript"></a> order.module.ts<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://emoji.gg/emoji/8584-typescript"><img src="https://cdn3.emoji.gg/emojis/8584-typescript.png" width="12px" height="12px" alt="TypeScript"></a> order.service.ts
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://emoji.gg/emoji/8584-typescript"><img src="https://cdn3.emoji.gg/emojis/8584-typescript.png" width="12px" height="12px" alt="TypeScript"></a> orders.controller.ts <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://emoji.gg/emoji/8584-typescript"><img src="https://cdn3.emoji.gg/emojis/8584-typescript.png" width="12px" height="12px" alt="TypeScript"></a> orders.module.ts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://emoji.gg/emoji/8584-typescript"><img src="https://cdn3.emoji.gg/emojis/8584-typescript.png" width="12px" height="12px" alt="TypeScript"></a> orders.service.ts
 
 
        💡 Controller:  Responsável por lidar com as requisições HTTP, 
