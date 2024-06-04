@@ -44,8 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
             price.classList.add('active');
 
             activeBrothCard = card;
-
-            // Salva o ID do caldo selecionado no localStorage
             localStorage.setItem('selectedBrothId', data.id);
         });
 

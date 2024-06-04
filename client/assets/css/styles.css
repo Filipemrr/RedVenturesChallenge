@@ -144,6 +144,34 @@ input {
   margin-left: var(--mb-1);
   margin-right: var(--mb-1);
 }
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 124px;
+  height: 15px;
+}
+/* Existing styles */
+
+/* Existing styles */
+
+.order-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+
+.order-image__description,
+.section__subtitle,
+.section__title {
+  text-align: center;
+}
 
 .grid {
   display: grid;
@@ -174,6 +202,7 @@ input {
   font-weight: var(--font-semi-bold);
   margin-bottom: var(--mb-0-75);
 }
+
 
 .home__data-title {
   font-size: var(--biggest-font-size);
