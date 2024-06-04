@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    localStorage.clear();
     const brothApiUrl = 'http://localhost:3000/meals/broth';
     let activeBrothCard = null;
 

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    localStorage.clear();
     const proteinApiUrl = 'http://localhost:3000/meals/protein';
     let activeProteinCard = null;
 
