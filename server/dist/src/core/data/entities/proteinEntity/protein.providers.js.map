@@ -1,0 +1,1 @@
+{"version":3,"file":"protein.providers.js","sourceRoot":"","sources":["../../../../../../src/core/data/entities/proteinEntity/protein.providers.ts"],"names":[],"mappings":";;;AACA,qDAAiD;AAEpC,QAAA,qBAAqB,GAAG;IACjC;QACI,OAAO,EAAE,oBAAoB;QAC7B,UAAU,EAAE,CAAC,UAAsB,EAAE,EAAE,CACnC,UAAU,CAAC,aAAa,CAAC,8BAAa,CAAC;QAC3C,MAAM,EAAE,CAAC,aAAa,CAAC;KAC1B;CACJ,CAAC"}
