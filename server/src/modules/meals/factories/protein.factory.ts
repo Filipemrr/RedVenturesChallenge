@@ -1,5 +1,5 @@
 import {IngredientDTO} from "../dtos/Ingredient.dto";
-import {ProteinEntity} from "../../../core/data/entities/proteinEntity/protein.entity";
+import {ProteinEntity} from "../../../core/data/entities/protein.entity";
 import {Injectable} from "@nestjs/common";
 
 @Injectable()

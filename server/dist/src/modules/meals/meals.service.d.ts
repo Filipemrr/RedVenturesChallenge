@@ -1,6 +1,6 @@
 import { Repository } from 'typeorm';
-import { ProteinEntity } from "../../core/data/entities/proteinEntity/protein.entity";
-import { BrothEntity } from "../../core/data/entities/brothEntity/broth.entity";
+import { ProteinEntity } from "../../core/data/entities/protein.entity";
+import { BrothEntity } from "../../core/data/entities/broth.entity";
 import { ProteinFactory } from "./factories/protein.factory";
 import { BrothFactory } from "./factories/broth.factory";
 import { IngredientDTO } from "./dtos/Ingredient.dto";

@@ -8,13 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.OrderModule = void 0;
 const common_1 = require("@nestjs/common");
-const database_module_1 = require("../../core/data/database.module");
 const order_controller_1 = require("./order.controller");
-const protein_providers_1 = require("../../core/data/entities/proteinEntity/protein.providers");
-const broth_providers_1 = require("../../core/data/entities/brothEntity/broth.providers");
 const order_service_1 = require("./order.service");
-const order_providers_1 = require("../../core/data/entities/orderEntity/order.providers");
 const newOrder_factory_1 = require("./factories/newOrder.factory");
+const typeorm_1 = require("@nestjs/typeorm");
+const broth_entity_1 = require("../../core/data/entities/broth.entity");
+const protein_entity_1 = require("../../core/data/entities/protein.entity");
+const order_entity_1 = require("../../core/data/entities/order.entity");
 let OrderModule = class OrderModule {
     configure(consumer) {
         consumer
@@ -25,9 +25,9 @@ let OrderModule = class OrderModule {
 exports.OrderModule = OrderModule;
 exports.OrderModule = OrderModule = __decorate([
     (0, common_1.Module)({
-        imports: [database_module_1.DatabaseModule],
+        imports: [typeorm_1.TypeOrmModule.forFeature([broth_entity_1.BrothEntity, protein_entity_1.ProteinEntity, order_entity_1.OrderEntity])],
         controllers: [order_controller_1.OrderController],
-        providers: [...order_providers_1.orderEntityProviders, ...broth_providers_1.brothEntityProviders, ...protein_providers_1.proteinEntityProvider, order_service_1.OrderService, newOrder_factory_1.OrderFactory],
+        providers: [order_service_1.OrderService, newOrder_factory_1.OrderFactory],
         exports: [order_service_1.OrderService],
     })
 ], OrderModule);

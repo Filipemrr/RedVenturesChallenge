@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BrothFactory = void 0;
-const broth_entity_1 = require("../../../core/data/entities/brothEntity/broth.entity");
+const broth_entity_1 = require("../../../core/data/entities/broth.entity");
 const common_1 = require("@nestjs/common");
 let BrothFactory = class BrothFactory {
     create(newIngredient) {

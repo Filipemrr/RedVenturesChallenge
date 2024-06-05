@@ -15,7 +15,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.OrderService = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("typeorm");
+const protein_entity_1 = require("../../core/data/entities/protein.entity");
+const broth_entity_1 = require("../../core/data/entities/broth.entity");
 const newOrder_factory_1 = require("./factories/newOrder.factory");
+const order_entity_1 = require("../../core/data/entities/order.entity");
+const typeorm_2 = require("@nestjs/typeorm");
 let OrderService = class OrderService {
     constructor(orderRepository, proteinRepository, brothRepository, newOrderFactory) {
         this.orderRepository = orderRepository;
@@ -40,9 +44,9 @@ let OrderService = class OrderService {
 exports.OrderService = OrderService;
 exports.OrderService = OrderService = __decorate([
     (0, common_1.Injectable)(),
-    __param(0, (0, common_1.Inject)('ORDER_REPOSITORY')),
-    __param(1, (0, common_1.Inject)('PROTEIN_REPOSITORY')),
-    __param(2, (0, common_1.Inject)('BROTH_REPOSITORY')),
+    __param(0, (0, typeorm_2.InjectRepository)(order_entity_1.OrderEntity)),
+    __param(1, (0, typeorm_2.InjectRepository)(protein_entity_1.ProteinEntity)),
+    __param(2, (0, typeorm_2.InjectRepository)(broth_entity_1.BrothEntity)),
     __metadata("design:paramtypes", [typeorm_1.Repository,
         typeorm_1.Repository,
         typeorm_1.Repository,

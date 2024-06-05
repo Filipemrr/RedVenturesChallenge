@@ -1,22 +1,21 @@
 import {
-    Inject,
     Injectable,
 } from "@nestjs/common";
 import { Repository } from 'typeorm';
-import { ProteinEntity } from "../../core/data/entities/proteinEntity/protein.entity";
-import { BrothEntity } from "../../core/data/entities/brothEntity/broth.entity";
+import { ProteinEntity } from "../../core/data/entities/protein.entity";
+import { BrothEntity } from "../../core/data/entities/broth.entity";
 import { ProteinFactory } from "./factories/protein.factory";
 import { BrothFactory } from "./factories/broth.factory";
 import { IngredientDTO } from "./dtos/Ingredient.dto";
+import {InjectRepository} from "@nestjs/typeorm";
 
 @Injectable()
 export class MealsService {
-
     constructor(
-        @Inject('PROTEIN_REPOSITORY')
+        @InjectRepository(ProteinEntity)
         private proteinRepository: Repository<ProteinEntity>,
 
-        @Inject('BROTH_REPOSITORY')
+        @InjectRepository(BrothEntity)
         private brothRepository: Repository<BrothEntity>,
 
         private proteinFactory: ProteinFactory,

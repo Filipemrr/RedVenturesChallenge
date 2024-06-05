@@ -1,5 +1,5 @@
 import {Injectable} from "@nestjs/common";
-import {OrderEntity} from "../../../core/data/entities/orderEntity/order.entity";
+import {OrderEntity} from "../../../core/data/entities/order.entity";
 import {ReturnOrderDto} from "../dtos/returnOrder.dto";
 import axios from "axios";
 import * as dotenv from 'dotenv';

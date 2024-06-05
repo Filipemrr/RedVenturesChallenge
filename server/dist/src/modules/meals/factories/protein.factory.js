@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProteinFactory = void 0;
-const protein_entity_1 = require("../../../core/data/entities/proteinEntity/protein.entity");
+const protein_entity_1 = require("../../../core/data/entities/protein.entity");
 const common_1 = require("@nestjs/common");
 let ProteinFactory = class ProteinFactory {
     create(newIngredient) {

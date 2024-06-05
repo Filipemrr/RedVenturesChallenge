@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.OrderFactory = void 0;
 const common_1 = require("@nestjs/common");
-const order_entity_1 = require("../../../core/data/entities/orderEntity/order.entity");
+const order_entity_1 = require("../../../core/data/entities/order.entity");
 const axios_1 = require("axios");
 const dotenv = require("dotenv");
 const process = require("process");

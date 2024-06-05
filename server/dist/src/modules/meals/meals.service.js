@@ -15,8 +15,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.MealsService = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("typeorm");
+const protein_entity_1 = require("../../core/data/entities/protein.entity");
+const broth_entity_1 = require("../../core/data/entities/broth.entity");
 const protein_factory_1 = require("./factories/protein.factory");
 const broth_factory_1 = require("./factories/broth.factory");
+const typeorm_2 = require("@nestjs/typeorm");
 let MealsService = class MealsService {
     constructor(proteinRepository, brothRepository, proteinFactory, brothFactory) {
         this.proteinRepository = proteinRepository;
@@ -54,8 +57,8 @@ let MealsService = class MealsService {
 exports.MealsService = MealsService;
 exports.MealsService = MealsService = __decorate([
     (0, common_1.Injectable)(),
-    __param(0, (0, common_1.Inject)('PROTEIN_REPOSITORY')),
-    __param(1, (0, common_1.Inject)('BROTH_REPOSITORY')),
+    __param(0, (0, typeorm_2.InjectRepository)(protein_entity_1.ProteinEntity)),
+    __param(1, (0, typeorm_2.InjectRepository)(broth_entity_1.BrothEntity)),
     __metadata("design:paramtypes", [typeorm_1.Repository,
         typeorm_1.Repository,
         protein_factory_1.ProteinFactory,

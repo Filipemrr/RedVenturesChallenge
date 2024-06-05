@@ -8,16 +8,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
-const dotenv = require("dotenv");
-const meals_module_1 = require("./src/modules/meals/meals.module");
 const order_module_1 = require("./src/modules/orders/order.module");
-dotenv.config();
+const meals_module_1 = require("./src/modules/meals/meals.module");
+const typeorm_1 = require("@nestjs/typeorm");
+const config_1 = require("@nestjs/config");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [meals_module_1.MealsModule, order_module_1.OrderModule],
+        imports: [
+            config_1.ConfigModule.forRoot(),
+            meals_module_1.MealsModule,
+            order_module_1.OrderModule,
+            typeorm_1.TypeOrmModule.forRoot({
+                type: process.env.DB_TYPE,
+                host: process.env.PG_HOST,
+                port: parseInt(process.env.PG_PORT),
+                username: process.env.PG_USER,
+                password: process.env.PG_PASSWORD,
+                database: process.env.PG_DB,
+                entities: [__dirname + '/**/*.entity{.ts,.js}'],
+                synchronize: true,
+            }),
+        ],
     })
 ], AppModule);
 //# sourceMappingURL=app.module.js.map
