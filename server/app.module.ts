@@ -12,7 +12,9 @@ import * as process from "process";
         OrderModule,
         TypeOrmModule.forRoot({
             type: 'postgres',
-            url: process.env.DATABASE_URL
+            url: process.env.DATABASE_URL,
+            entities: [__dirname + '/**/*.entity{.ts,.js'],
+            synchronize: true
         }),
     ],
 })
