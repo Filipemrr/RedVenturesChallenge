@@ -12,10 +12,15 @@ import * as process from "process";
         OrderModule,
         TypeOrmModule.forRoot({
             type: 'postgres',
-            url: process.env.DATABASE_URL,
-            entities: [__dirname + '/**/*.entity{.ts,.js'],
-            synchronize: true
+            port: 5432,
+            host: process.env.DB_HOST,
+            username: process.env.DB_USER,
+            password: process.env.DB_PASSWORD,
+            database: process.env.DB_NAME,
+            entities: [__dirname + '/**/*.entity{.ts,.js}'],
+            synchronize: false,
         }),
     ],
+
 })
 export class AppModule {}
