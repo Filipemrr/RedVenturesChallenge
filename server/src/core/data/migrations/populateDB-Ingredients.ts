@@ -49,8 +49,8 @@ const proteinFlavors: IngredientDTO[] = [
   },
   {
     type: "protein",
-    imageInactive: "https://cdn.discordapp.com/attachments/1017600421335937104/1247639601179398265/image.png?ex=6660c26c&is=665f70ec&hm=959a1580c8d9a18a9858cdf39aae55d1875f28b20216c6562ba0736874d65029&",
-    imageActive: "https://cdn.discordapp.com/attachments/1017600421335937104/1247640408528523304/image.png?ex=6660c32d&is=665f71ad&hm=a285a7faca51cc08c17b23c0a69954065c071fd49eb8e68cb23132f6c210a906&",
+    imageInactive: "https://cdn.discordapp.com/attachments/862831874765881365/1253020984580112467/image.png?ex=6674563a&is=667304ba&hm=cc105cd498c950323c598fd029623fef72a71b7a24cda3d0cae9800908ca05fb&",
+    imageActive: "https://cdn.discordapp.com/attachments/862831874765881365/1253021447375425616/image.png?ex=667456a9&is=66730529&hm=31522edbc52373dd03cb47ed3951bd108bcea518dc7cbd89aadc6d5cf1a0b02f&",
     name: "Karaague",
     description: "Three units of friend chicken, moyashi, ajitama egg and other vegetables",
     price: 12
